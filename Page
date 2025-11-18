@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CleanOut – Profesjonalne opróżnianie, transport i utylizacja</title>
+
+<style>
+:root {
+--accent: #3caa50;
+--dark: #1a1a1a;
+--light: #f5f5f5;
+font-family: Inter, system-ui, sans-serif;
+}
+body { margin: 0; background: var(--light); color: var(--dark); }
+
+header {
+background: white;
+padding: 18px 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+position: sticky;
+top: 0;
+z-index: 20;
+}
+header img { height: 55px; }
+nav a {
+margin-left: 18px;
+text-decoration: none;
+color: var(--dark);
+font-weight: 600;
+}
+
+.hero {
+padding: 70px 20px;
+text-align: center;
+background: white;
+}
+.hero h1 { font-size: 2.6rem; margin: 0; }
+.hero p {
+max-width: 650px;
+margin: 12px auto;
+color: #444;
+font-size: 1.2rem;
+}
+.btn {
+background: var(--accent);
+padding: 12px 20px;
+color: white;
+border-radius: 8px;
+font-size: 1.1rem;
+text-decoration: none;
+display: inline-block;
+margin-top: 14px;
+font-weight: 600;
+}
+
+section { padding: 60px 20px; max-width: 1150px; margin: auto; }
+h2 { text-align: center; margin-bottom: 35px; }
+
+/* Usługi – kafelki */
+.services {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 22px;
+}
+.service {
+background: white;
+padding: 26px;
+border-radius: 14px;
+box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+cursor: pointer;
+transition: 0.2s;
+}
+.service:hover {
+transform: translateY(-4px);
+box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.service h3 { color: var(--accent); margin-top: 0; }
+
+/* Formularz */
+form {
+background: white;
+padding: 28px;
+border-radius: 12px;
+box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+max-width: 600px;
+margin: auto;
+display: grid;
+gap: 15px;
+}
+input, textarea {
+padding: 12px;
+border-radius: 8px;
+border: 1px solid #ccc;
+font-size: 1rem;
+}
+label { display: flex; align-items: center; gap: 10px; font-size: 1rem; }
+
+/* Sekcje opisów procesów */
+.process {
+background: white;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+margin-top: 40px;
+}
+
+footer {
+background: var(--dark);
+color: white;
+padding: 25px;
+text-align: center;
+margin-top: 40px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<img src="C:\Users\Janek\Desktop\Strona internetowa\logoCleanOut.png" alt="CleanOut logo" />
+<nav>
+<a href="#uslugi">Usługi</a>
+<a href="#zamow">Zamów</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>CLEANOUT – Opróżnianie, transport i utylizacja</h1>
+<p>Profesjonalne wynoszenie, transport, demontaż mebli, utylizacja, opróżnianie pomieszczeń oraz sprzątanie po realizacji.</p>
+<a href="#zamow" class="btn">Złóż zamówienie</a>
+</section>
+
+<section id="uslugi">
+<h2>Nasze usługi</h2>
+
+<div class="services">
+<div class="service" onclick="location.href='#transport'">
+<h3>🚚 Wynoszenie i transport mebli</h3>
+<p>Bezpieczny transport wyposażenia wnętrz.</p>
+</div>
+
+<div class="service" onclick="location.href='#demontaz'">
+<h3>🪚 Demontaż mebli na miejscu</h3>
+<p>Profesjonalny i sprawny demontaż mebli.</p>
+</div>
+
+<div class="service" onclick="location.href='#utylizacja'">
+<h3>♻️ Utylizacja i recykling</h3>
+<p>Legalna i ekologiczna utylizacja mebli.</p>
+</div>
+
+<div class="service" onclick="location.href='#opróznianie'">
+<h3>🏢 Opróżnianie mieszkań i biur</h3>
+<p>Kompleksowe czyszczenie i wynoszenie wyposażenia.</p>
+</div>
+
+<div class="service" onclick="location.href='#sprzatanie'">
+<h3>🧹 Sprzątanie po opróżnieniu</h3>
+<p>Dokładne sprzątanie po wykonanej usłudze.</p>
+</div>
+</div>
+</section>
+
+<section id="zamow">
+<h2>Złóż zamówienie</h2>
+
+<form>
+<input type="text" placeholder="Imię i nazwisko" required>
+<input type="tel" placeholder="Numer telefonu" required>
+<input type="email" placeholder="Adres e-mail" required>
+
+<p><strong>Wybierz usługę/usługi:</strong></p>
+
+<label><input type="checkbox" name="services"> Wynoszenie i transport mebli</label>
+<label><input type="checkbox" name="services"> Demontaż mebli na miejscu</label>
+<label><input type="checkbox" name="services"> Utylizacja i recykling</label>
+<label><input type="checkbox" name="services"> Opróżnianie mieszkań, biur, magazynów</label>
+<label><input type="checkbox" name="services"> Sprzątanie po opróżnieniu</label>
+
+<textarea rows="5" placeholder="Opisz swoje zlecenie" required></textarea>
+<button class="btn" type="submit">Wyślij zamówienie</button>
+</form>
+</section>
+
+<!-- SEK CJ E OPISÓW PROCESÓW -->
+
+<section id="transport" class="process">
+<h2>🚚 Wynoszenie i transport mebli – Jak wygląda proces?</h2>
+<p>1. Przyjazd ekipy na miejsce i zabezpieczenie mebli.<br>
+2. Demontaż, jeśli jest potrzebny.<br>
+3. Wyniesienie przedmiotów przy użyciu profesjonalnego sprzętu.<br>
+4. Załadunek do auta dostawczego.<br>
+5. Transport pod wskazany adres.<br>
+6. Wniesienie i ustawienie we wskazanym miejscu.</p>
+</section>
+
+<section id="demontaz" class="process">
+<h2>🪚 Demontaż mebli – Jak przebiega?</h2>
+<p>1. Ocena konstrukcji mebla.<br>
+2. Dobór narzędzi i zabezpieczenie otoczenia.<br>
+3. Demontaż elementów krok po kroku.<br>
+4. Pakowanie części do transportu lub utylizacji.</p>
+</section>
+
+<section id="utylizacja" class="process">
+<h2>♻️ Utylizacja i przekazanie do recyklingu</h2>
+<p>1. Odbiór mebli lub materiałów do wyrzucenia.<br>
+2. Segregacja zgodnie z przepisami.<br>
+3. Transport do punktu recyklingu / PSZOK.<br>
+4. Potwierdzenie ekologicznej utylizacji.</p>
+</section>
+
+<section id="opróznianie" class="process">
+<h2>🏢 Opróżnianie mieszkań, biur i magazynów</h2>
+<p>1. Oględziny pomieszczenia i ustalenie zakresu prac.<br>
+2. Wynoszenie mebli i wyposażenia.<br>
+3. Segregacja przedmiotów (zabieramy, utylizujemy, klient zostawia).<br>
+4. Załadunek i wywóz.<br>
+5. Przygotowanie pomieszczenia do sprzątania.</p>
+</section>
+
+<section id="sprzatanie" class="process">
+<h2>🧹 Sprzątanie po opróżnieniu</h2>
+<p>1. Usunięcie resztek i odpadów.<br>
+2. Odkurzanie, mycie podłóg i powierzchni.<br>
+3. Przewietrzenie pomieszczeń.<br>
+4. Pozostawienie obiektu w stanie gotowym do wynajmu lub sprzedaży.</p>
+</section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p style="text-align:center; font-size:1.2rem;">
+📞 Telefon: <strong>+48 000 000 000</strong><br>
+✉️ E-mail: <strong>kontakt@cleanout.pl</strong><br>
+📍 Obsługujemy całe woj. mazowieckie
+</p>
+</section>
+
+<footer>
+© 2025 CleanOut – Wszystkie prawa zastrzeżone
+</footer>
+
+</body>
+</html>
